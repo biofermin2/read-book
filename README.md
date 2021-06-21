@@ -23,3 +23,7 @@ festival,open-jtalkといった音声合成装置のインストール
 
 ver3.5では表示された内容に関してファイルに書き込む機能を追加しようと考えています。
 ←リダイレクトコマンドで対応する事にした。その際、(setf cl-rainbow:*enabled* nil) に切り替えておく必要あり。
+使用例
+$ sbcl ./read-book-ver3.4.1.lisp <input file> > <output file>
+※最近sbcl ver2以上にあげてからはそのままscriptファイルとして実行出来なくなりました。
+  roswellでscriptを書き直す必要がありそうです。
