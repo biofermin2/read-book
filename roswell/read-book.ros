@@ -1,0 +1,28 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '(:read-book) :silent t)
+  )					; => (:READ-BOOK)
+
+(defpackage :ros.script.read-book.3868834999
+  (:use :cl :read-book))		; => #<PACKAGE "ROS.SCRIPT.READ-BOOK.3868834999">
+(in-package :ros.script.read-book.3868834999) ; => #<PACKAGE "ROS.SCRIPT.READ-BOOK.3868834999">
+
+(defun main (argv)
+  (declare (ignorable argv))
+  (unwind-protect
+       (restart-case (read-book argv)
+	 (use-value (value)
+	   :report "Use a value."
+	   :interactive (lambda ()
+			  (list (read)))
+	   value)
+	 (ignore ()
+	   :report "Ignore."
+	   nil))))			; => MAIN
+
+;;; vim: set ft=lisp lisp:
