@@ -7,6 +7,7 @@ rosscriptに書き直したりしました。
 このプログラムは日本語と英語が混ざっている文章をそれぞれ、きれいな日本語と英語で読み上げるために開発しました。
 
 文章での説明よりも実際に動いている様子を見てもらった方がわかりやすいかもしれません。
+（下の画像をクリックすれば動画再生して利用状況を確認出来ます。）
 
 
 [![Common Lisp READ-BOOK ver3.4 日本語英語混成文読み上げ装置](http://img.youtube.com/vi/L-Wyjoe8--k/0.jpg)](https://www.youtube.com/watch?v=L-Wyjoe8--k)
